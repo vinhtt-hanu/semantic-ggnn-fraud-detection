@@ -1,0 +1,8 @@
+{
+  "checkpoint": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "digest": "f9d30eb69c178263c00c2751831800e823aaf18b7305dcfb2e36b41dfddcdcd6",
+  "rows": 1913,
+  "dim": 384,
+  "text_policy": "Frozen MiniLM on bucketed causal historical profiles; no account IDs or labels"
+}

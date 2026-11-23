@@ -1,0 +1,12 @@
+{
+  "verified_models": 30,
+  "verified_baselines": 15,
+  "test_n": 68848,
+  "test_fraud_n": 846,
+  "paired_mean_delta_pr_auc": 0.0015018234904360605,
+  "paired_t_ci_95": [
+    -0.015992301387685304,
+    0.018995948368557423
+  ],
+  "pr_auc_recomputation_issues": []
+}

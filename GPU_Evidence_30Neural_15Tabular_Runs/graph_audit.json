@@ -1,0 +1,17 @@
+{
+  "source_transactions": 6362620,
+  "query_transactions": 142760,
+  "historical_event_nodes": 206861,
+  "fraction_with_history": 0.5520243765760717,
+  "unique_query_endpoint_accounts": 278649,
+  "unique_text_profiles": 1913,
+  "cutoffs": {
+    "history_cut": 483,
+    "train_cut": 595,
+    "val_cut": 669
+  },
+  "nodes_per_ego_graph": 8,
+  "neighbors_per_endpoint": 3,
+  "graph_definition": "Historical transaction-event star; NOT original full-account GGNN",
+  "causality": "strictly earlier step; current step excluded; no label in feature/graph"
+}

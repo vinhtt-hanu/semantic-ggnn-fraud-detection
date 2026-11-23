@@ -1,0 +1,23 @@
+{
+  "modes": [
+    "semantic-first",
+    "semantic-last",
+    "no-lm",
+    "no-transformer",
+    "numeric-ggnn",
+    "no-ggnn"
+  ],
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "epochs": 8,
+  "batch_size": 512,
+  "train_negatives": 18000,
+  "message_steps": 5,
+  "historical_events_per_endpoint": 3,
+  "comparison": "redefined historical ego-event GGNN; not original P3/P4"
+}

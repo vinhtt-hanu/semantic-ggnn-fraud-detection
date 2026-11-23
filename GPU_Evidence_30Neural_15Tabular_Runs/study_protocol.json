@@ -1,0 +1,70 @@
+{
+  "study": "controlled redefinition of semantic-first/semantic-last, NOT original P3/P4 reproduction",
+  "data_file": "/content/paysim_download_cache/PS_20174392719_1491204439457_log.csv",
+  "data_file_size": 493534783,
+  "protocol": "Same PaySim temporal cutoffs. Account event history only from steps STRICTLY earlier than prediction step; same-step excluded. Train negatives sampled; full validation and test. Same frozen LM checkpoint, fixed template encoder, same inputs and training budget. Only fusion placement changes for matched P3/P4-analogues.",
+  "time_cutoffs": {
+    "history_cut": 483,
+    "train_cut": 595,
+    "val_cut": 669
+  },
+  "rows": {
+    "sampled_labeled_train": 19180,
+    "validation_full": 54732,
+    "test_full": 68848
+  },
+  "fraud_counts": {
+    "train": 1180,
+    "validation": 808,
+    "test": 846
+  },
+  "architecture_note": "Historical *transaction-event* star-graph, not exact account-level GGNN of archived original P3/P4",
+  "encoder": {
+    "checkpoint": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "digest": "f9d30eb69c178263c00c2751831800e823aaf18b7305dcfb2e36b41dfddcdcd6",
+    "rows": 1913,
+    "dim": 384,
+    "text_policy": "Frozen MiniLM on bucketed causal historical profiles; no account IDs or labels"
+  },
+  "config": {
+    "modes": [
+      "semantic-first",
+      "semantic-last",
+      "no-lm",
+      "no-transformer",
+      "numeric-ggnn",
+      "no-ggnn"
+    ],
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "epochs": 8,
+    "batch_size": 512,
+    "train_negatives": 18000,
+    "message_steps": 5,
+    "historical_events_per_endpoint": 3,
+    "comparison": "redefined historical ego-event GGNN; not original P3/P4"
+  },
+  "graph_audit": {
+    "source_transactions": 6362620,
+    "query_transactions": 142760,
+    "historical_event_nodes": 206861,
+    "fraction_with_history": 0.5520243765760717,
+    "unique_query_endpoint_accounts": 278649,
+    "unique_text_profiles": 1913,
+    "cutoffs": {
+      "history_cut": 483,
+      "train_cut": 595,
+      "val_cut": 669
+    },
+    "nodes_per_ego_graph": 8,
+    "neighbors_per_endpoint": 3,
+    "graph_definition": "Historical transaction-event star; NOT original full-account GGNN",
+    "causality": "strictly earlier step; current step excluded; no label in feature/graph"
+  }
+}
